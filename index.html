@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>AOS</title>
+    <style>
+        *, body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .backgrounds {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            /* -webkit-transform: translateZ(0);
+            transform: translateZ(0); */
+            z-index: -1;
+            top: 0;
+        }
+        .overlay:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            background: #004048;
+            opacity: 0.8;
+        }
+        .item {
+            width: 800px;
+            height: 90vh;
+            margin: 5vh auto;
+            background: #ccc;
+            text-align: center;
+            color: #FFF;
+            font-size: 3em;
+            border: 8px solid white;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1200 })</script>
+
+    <div class="backgrounds overlay">
+        <img src="./assets/img.jpg" alt="">
+    </div>
+    <!-- <div class="box b" data-aos="flip-down"><h2>Animated using <code>flip-down</code>.</h2></div> -->
+    <div class="item" data-aos="fade-up">1</div>
+    <div class="item" data-aos="fade-down">2</div>
+    <div class="item" data-aos="fade-right">3</div>
+    <div class="item" data-aos="fade-left">4</div>
+</body>
+</html>
